@@ -4,6 +4,6 @@
 	$jmeno = $_SESSION['user'];
 	$zprava = $_POST['zprava']; 
 
-	mysqli_query($conn, "INSERT INTO `chat`(`jmeno`, `zprava`,`cas`) VALUES ('$jmeno','$zprava',Now())");
-	header("Location: ../homedasfkljhlfajhsdůafslhjnkůfasdiholůfasliohůofihůasoihafůoafhisůpoijuhúfas%2B654fg4dfs564g56sd.php");
+	mysqli_query($conn, "INSERT INTO `chat`(`name`, `message`,`time`) VALUES ('$jmeno','$zprava',Now())");
+	header("Location: ../home.php");
 ?>

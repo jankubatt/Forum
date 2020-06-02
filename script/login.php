@@ -18,7 +18,7 @@
 	}
     
 	if (password_verify($password, $passwordCheck)) {
-		header("Location: ../homedasfkljhlfajhsdůafslhjnkůfasdiholůfasliohůofihůasoihafůoafhisůpoijuhúfas+654fg4dfs564g56sd.php");
+		header("Location: ../home.php");
 		exit();
 	}
 	
