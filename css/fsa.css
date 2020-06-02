@@ -1,0 +1,17 @@
+body {
+	background-color: lightblue;
+}
+
+.navigace {
+	border-bottom: 2px solid black;
+}
+
+.sidebar {
+    border-left: 2px solid black;
+}
+
+.chat {
+    height: 500px;
+    width: 100px;
+    background-color: powderblue;
+}
