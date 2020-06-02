@@ -131,7 +131,7 @@
                                     <h5 style="height:19rem;" class="card-text chat" id="messages"></h5>
                                     <br><br>
                                     <form action="chat/msg_write.php" method="post">
-                                    <input class="form-control d-inline-block" style="width:20rem;" type="text" name="zprava">    
+                                    <input class="form-control d-inline-block" style="width:20rem;" type="text" name="message">    
                                     <input class="form-control d-inline-block" style="width:4rem;" type="submit" value="Send">
                                     </form>
                                 
