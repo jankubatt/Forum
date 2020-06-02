@@ -18,7 +18,6 @@
 		</style>
 	</head>
 	<body>
-		<?php echo $_SESSION['error']; ?>
 	
 	<img src="https://seeklogo.com/images/A/anonymous-logo-D081A0F6B1-seeklogo.com.png" style="display: block;
     margin: 0 auto; padding:none;">
