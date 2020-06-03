@@ -95,7 +95,7 @@
                                         $user = $row["user"];
                                         $dueDate = $row['duedate'];
 
-                                        echo "<form action=" echo htmlspecialchars("script/addSolution.php") " method=\"POST\">
+                                        echo "<form action=\"script/addSolution.php\" method=\"POST\">
                                     			<div class=\"container mt-3\">
 
 
@@ -103,10 +103,6 @@
                                                         <label for=\"popis\">Solution</label>
                                                         <textarea class=\"form-control\" id=\"reseni\" name=\"solution\" rows=\"10\"></textarea>
                                                     </div>
-                                                    <div class=\"form-group\">
-                                                        <label for=\"exampleFormControlFile1\">File</label>
-                                                        <input type=\"file\" class=\"form-control-file\" id=\"exampleFormControlFile1\" name=\"file\">
-                                                      </div>
                                     			  	<button type=\"submit\" class=\"btn btn-success mt-4\">Add solution</button>
                                     			</div>
                                     		</form>";
@@ -120,20 +116,7 @@
 				    </div>
 			    </div>
 
-    			<div class="col-lg-3 sidebar">
-    			    <div class="mt-3">
-    			        <div class="card mb-3">
-                            <div class="card-body">
-                                <h3 class="card-title">Info!</h3>
-                                <h5 class="mb-5">Today is: <?php echo date("d.m") ?></h5>
-                                <h5 id="txt"></h5>
-                                <h6 class="text-muted">Homework today: <?php echo $todayWork; ?></h6>
-                                <h6 class="text-muted">Homework this week: <?php echo $weekWork; ?></h6>
-                                <h6 class="text-muted">Homework all: <?php echo $work; ?></h6>
-                            </div>
-                        </div>
-    			    </div>
-    			</div>
+    			
     		</div>
     		<br>
         </div>

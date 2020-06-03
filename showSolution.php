@@ -1,11 +1,11 @@
 <?php
     session_start();
-    
+
     if(!(isset($_SESSION["user"]))) {
         header("Location: index.php");
         exit();
     }
-    
+
     $chatUsername = $_SESSION["user"];
 ?>
 
@@ -67,27 +67,26 @@
                 </ul>
             </div>
         </nav>
-        
-    
-        
+
+
+
         <div class="container-fluid">
             <div class="row">
     			<div class="col">
     				<div class="mt-3">
     				    <?php
-                        	session_start();    //start session
                             include_once 'script/conn.php';    //make connection
-                            
+
                             //storing input from form
                             $uid = $_GET["id"];
-                        
+
                             $sql = "SELECT * FROM work WHERE uid = '$uid'";
                             $result = mysqli_query($conn, $sql);
                             if ($result->num_rows > 0) {
                                 // output data of each row
                                 while($row = $result->fetch_assoc()) {
                                     $solution = $row["solution"];
-                                    
+
                                     echo "
                                     <div class='card mb-3'>
                                         <div class='card-body'>
@@ -100,41 +99,31 @@
                                     </div>";
                                 }
                             }
-                            
-                            
-                        
+
+
+
                         ?>
-    				    
+
 				    </div>
 			    </div>
-			    
+
 
     			<div class="col-lg-3 sidebar">
     			    <div class="mt-3">
-    			        <div class="card mb-3">
-                            <div class="card-body">
-                                <h3 class="card-title">Info!</h3>
-                                <h5 class="mb-5">Today is: <?php echo date("d.m") ?></h5>
-                                <h5 id="txt"></h5>
-                                <h6 class="text-muted">Homework today: <?php echo $todayWork; ?></h6>
-                                <h6 class="text-muted">Homework this week: <?php echo $weekWork; ?></h6>
-                                <h6 class="text-muted">Homework all: <?php echo $work; ?></h6>
-                            </div>
-                        </div>
-                        
+
                         <div class="card mb-3" style="height:30rem;">
                             <div class="card-body">
                                 <h3 class="card-title">Chat</h3>
-                                
+
                                     <script type="text/javascript" src="chat/messages.js"></script>
                                     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
                                     <h5 style="height:19rem;" class="card-text chat" id="messages"></h5>
                                     <br><br>
                                     <form action="chat/msg_write.php" method="post">
-                                    <input class="form-control d-inline-block" style="width:20rem;" type="text" name="message">    
+                                    <input class="form-control d-inline-block" style="width:20rem;" type="text" name="message">
                                     <input class="form-control d-inline-block" style="width:4rem;" type="submit" value="Send">
                                     </form>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -145,4 +134,3 @@
         </div>
 	</body>
 </html>
-
