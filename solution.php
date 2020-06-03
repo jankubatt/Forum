@@ -1,11 +1,11 @@
 <?php
     session_start();
-    
+
     if(!(isset($_SESSION["user"]))) {
         header("Location: index.php");
         exit();
     }
-    
+
     $chatUsername = $_SESSION["user"];
 ?>
 
@@ -38,7 +38,7 @@
 		<link rel="stylesheet" href="css/forum.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	</head>
 
 	<body onload="startTime()" onload="setInterval('chat.update()', 1000)">
@@ -67,20 +67,20 @@
                 </ul>
             </div>
         </nav>
-        
-    
-        
+
+
+
         <div class="container-fluid">
             <div class="row">
     			<div class="col">
     				<div class="mt-3">
     				    <?php
     				        include_once 'script/conn.php';    //make connection
-    				        
+
     				        if ($conn->connect_error) {
                                 die("Connection failed: " . $conn->connect_error);
                             }
-                            
+
                             $id = $_GET["id"];
                             $_SESSION["solId"] = $id;
                             $sql = "SELECT * FROM work WHERE uid = '$id'";
@@ -88,17 +88,17 @@
                             if ($result->num_rows > 0) {
                                 // output data of each row
                                 while($row = $result->fetch_assoc()) {
-                                    
+
                                         $title = $row['title'];
                                         $subject = $row['subject'];
                                         $desc = $row["description"];
                                         $user = $row["user"];
                                         $dueDate = $row['duedate'];
-                                        
-                                        echo "<form action=\"script/addSolution.php\" method=\"POST\">
+
+                                        echo "<form action=" echo htmlspecialchars("script/addSolution.php") " method=\"POST\">
                                     			<div class=\"container mt-3\">
-                                    				
-                                    			  	
+
+
                                     			  	<div class=\"form-group\">
                                                         <label for=\"popis\">Solution</label>
                                                         <textarea class=\"form-control\" id=\"reseni\" name=\"solution\" rows=\"10\"></textarea>
@@ -110,13 +110,13 @@
                                     			  	<button type=\"submit\" class=\"btn btn-success mt-4\">Add solution</button>
                                     			</div>
                                     		</form>";
-                                    
+
                                 }
                             }
-                            
+
                             $conn->close();
     				    ?>
-    				    
+
 				    </div>
 			    </div>
 

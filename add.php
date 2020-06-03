@@ -1,6 +1,6 @@
 <?php
     session_start();
-    
+
     if(!(isset($_SESSION["user"]))) {
         header("Location: index.php");
         exit();
@@ -46,9 +46,9 @@
 		    	</ul>
 			</div>
 		</nav>
-        
-        
-        
+
+
+
         <form action="script/add.php" method="POST">
 			<div class="container mt-3">
 				<div class="form-group">

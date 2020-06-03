@@ -1,6 +1,6 @@
 <?php
     session_start();
-    
+
     if(!(isset($_SESSION["user"]))) {
         header("Location: index.php");
         exit();
@@ -73,7 +73,7 @@
                           <div class="card-body">
                             <h5 class="card-title">None1</h5>
                             <p class="card-text">None1</p>
-                            <a href="openbysubject.php?subject=CJL" class="btn btn-primary">Homework</a>
+                            <a href="openbysubject.php?subject=None1" class="btn btn-primary">Homework</a>
                           </div>
                         </div>
 				    </div>
@@ -84,7 +84,7 @@
                           <div class="card-body">
                             <h5 class="card-title">None2</h5>
                             <p class="card-text">None2</p>
-                            <a href="openbysubject.php?subject=MAT" class="btn btn-primary">Homework</a>
+                            <a href="openbysubject.php?subject=None2" class="btn btn-primary">Homework</a>
                           </div>
                         </div>
 				    </div>
@@ -95,7 +95,7 @@
                           <div class="card-body">
                             <h5 class="card-title">None3</h5>
                             <p class="card-text">None3</p>
-                            <a href="openbysubject.php?subject=FYZ" class="btn btn-primary">Homework</a>
+                            <a href="openbysubject.php?subject=None3" class="btn btn-primary">Homework</a>
                           </div>
                         </div>
 				    </div>

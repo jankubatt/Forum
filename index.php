@@ -1,3 +1,11 @@
+<?php
+	session_start();
+	if(!(isset($_SESSION["error"]))) {
+			$_SESSION["error"] = "";
+	}
+?>
+
+
 
 <!DOCTYPE html>
 <html>
@@ -12,19 +20,20 @@
 	</head>
 	<body>
 		<div class="display-1 text-center mb-5">Welcome!</div>
-
-		<form action="script/login.php" method="POST">
 			<div class="container">
-				<div class="form-group">
+				<form action="script/login.php" method="POST">
+					<div class="form-group">
 			    	<label>Username</label>
 			    	<input type="text" class="form-control" name="username">
 			  	</div>
 			  	<div class="form-group">
 			    	<label>Password</label>
 			    	<input type="password" class="form-control" name="password">
-			 	</div>
+			 		</div>
 			  	<button type="submit" class="btn btn-primary" name=""submit2>Login</button>
+				</form>
+				<br>
+				<p><?php echo $_SESSION["error"]; ?></p>
 			</div>
-		</form>
 	</body>
 </html>
