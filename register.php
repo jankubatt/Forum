@@ -1,44 +1,46 @@
 <?php
-	session_start();
+session_start();
+
+if(!(isset($_SESSION["error"]))) {
+	$_SESSION["error"] = "";
+}
 ?>
 
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Register</title>
-		<style>
-		    #kk{
-		        text-align: center;
-		        border: 2px solid black;
-		        margin:300px;
-		        padding:45px;
-		        margin-left:750px;
-		        margin-right:750px;
-		    }
-		</style>
-	</head>
-	<body>
-
-	<img src="https://seeklogo.com/images/A/anonymous-logo-D081A0F6B1-seeklogo.com.png" style="display: block;
-    margin: 0 auto; padding:none;">
-
-	<div id="kk">
-
+<head>
+	<title>Register</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/forum.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="display-1 text-center mb-5">Welcome!</div>
+	<div class="container">
 		<form action="script/register.php" method="POST">
-			Username:
-			<input type="text" name="username">
-			<br><br>
-			Nickname:
-			<input type="text" name="nick">
-			<br><br>
-			Password:
-			<input type="password" name="pwd">
-			<br><br>
-			Confirm Password:
-			<input type="password"  name="pwdCfm">
-			<br><br>
-			<input type="submit">
+			<div class="form-group">
+				<label>Username</label>
+				<input type="text" class="form-control" name="username">
+			</div>
+			<div class="form-group">
+				<label>Nickname</label>
+				<input type="text" class="form-control" name="nick">
+			</div>
+			<div class="form-group">
+				<label>Password</label>
+				<input type="password" class="form-control" name="pwd">
+			</div>
+			<div class="form-group">
+				<label>Password Confirm</label>
+				<input type="text" class="form-control" name="pwdCfm">
+			</div>
+			<button type="submit" class="btn btn-primary" name=""submit2>Register</button>
 		</form>
+		<br>
+		<p><?php echo $_SESSION["error"]; ?></p>
 	</div>
-	</body>
+</body>
 </html>
