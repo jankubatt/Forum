@@ -33,15 +33,16 @@ $chatUsername = $_SESSION["user"];
   </script>
   <title>Forum</title>
   <meta charset="utf-8">
+  <meta name="author" content="Jan Kubat">
+  <meta name="description" content="simple lightweight forum">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/forum.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<body onload="startTime()" onload="setInterval('chat.update()', 1000)">
+<body onload="startTime()" style="background-color: lightblue;">
   <nav class="navbar navbar-expand-md navbar-light bg-light navigace w-100">
     <a class="navbar-brand" href="home.php">Forum</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -104,28 +105,6 @@ $chatUsername = $_SESSION["user"];
 
           ?>
 
-        </div>
-      </div>
-
-
-      <div class="col-lg-3 sidebar">
-        <div class="mt-3">
-
-          <div class="card mb-3" style="height:30rem;">
-            <div class="card-body">
-              <h3 class="card-title">Chat</h3>
-
-              <script type="text/javascript" src="chat/messages.js"></script>
-              <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-              <h5 style="height:19rem;" class="card-text chat" id="messages"></h5>
-              <br><br>
-              <form action="chat/msg_write.php" method="post">
-                <input class="form-control d-inline-block" style="width:20rem;" type="text" name="message">
-                <input class="form-control d-inline-block" style="width:4rem;" type="submit" value="Send">
-              </form>
-
-            </div>
-          </div>
         </div>
       </div>
     </div>

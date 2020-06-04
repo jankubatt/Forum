@@ -29,11 +29,9 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 	// output data of each row
 	while($row = $result->fetch_assoc()) {
-		$id = $row["uid"];
-
-		$file = "../posts/" . $title . $uid . ".php";
+		$file = "../posts.log";
 		$current = file_get_contents($file);
-		$txt = $row["id"] . "\n" . $row["title"] . "\n" .$row["description"] . "\n" .$row["subject"] . "\n" .$row["date"] . "\n" .$row["duedate"] . "\n" .$row["user"] . "\n" .$row["uid"];
+		$txt = "\n----------------" . "\nUID: " .$row["uid"] . "\nID: " . $row["id"] . "\nTITLE: " . $row["title"] . "\nDESC: " .$row["description"] . "\n SUB: " .$row["subject"] . "\nDATE: " .$row["date"] . "\nDUE: " .$row["duedate"] . "\nUSER: " .$row["user"];
 		$current .= $txt;
 		file_put_contents($file, $current);
 	}

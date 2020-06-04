@@ -11,13 +11,15 @@ if(!(isset($_SESSION["error"]))) {
 <head>
 	<title>Register</title>
 	<meta charset="utf-8">
+	<meta name="author" content="Jan Kubat">
+	<meta name="description" content="simple lightweight forum">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/forum.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body style="background-color: lightblue;">
 	<div class="display-1 text-center mb-5">Welcome!</div>
 	<div class="container">
 		<form action="script/register.php" method="POST">
@@ -35,7 +37,7 @@ if(!(isset($_SESSION["error"]))) {
 			</div>
 			<div class="form-group">
 				<label>Password Confirm</label>
-				<input type="text" class="form-control" name="pwdCfm">
+				<input type="password" class="form-control" name="pwdCfm">
 			</div>
 			<button type="submit" class="btn btn-primary" name=""submit2>Register</button>
 		</form>

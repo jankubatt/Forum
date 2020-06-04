@@ -1,6 +1,6 @@
 function getMessages(letter) {
   var div = $("#messages");
-  $.get('chat/messages.php', function(data) {
+  $.get('script/messages.php', function(data) {
     div.html(data);
   });
 }
