@@ -1,9 +1,10 @@
 # Forum
-Simple forum for homework submissons etc.
+Simple forum for homework submissions etc.
 
-# How To Use
-1) Create MySql DB
-2) Paste those into script/conn.php file. Currently, this file is set up for XAMPP
+# How To Use (XAMPP)
+0) Put those files into the htdocs folder
+1) Create MySQL DB, default name is forum
+2) Paste DB information into script/conn.php file. Currently, this file is set up for XAMPP default
 3) Paste these commands into your database CLI or Command inline. MAKE SURE IT IS FOR DB NOT FOR TABLE
   CREATE TABLE users (id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
                       username varchar(255) NOT NULL,
