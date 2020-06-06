@@ -49,8 +49,6 @@ if(!(isset($_SESSION["user"]))) {
     </div>
   </nav>
 
-
-
   <form action="script/add.php" method="POST">
     <div class="container mt-3">
       <div class="form-group">
