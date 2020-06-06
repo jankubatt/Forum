@@ -104,5 +104,11 @@ if(!(isset($_SESSION["user"]))) {
       </div>
     </div>
   </div>
+
+  <div style="height: 200px;"></div>
+
+  <footer class="text-center text-muted">
+    <p>&copy; Jan Kubat 2020</p>
+  </footer>
 </body>
 </html>

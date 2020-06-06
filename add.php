@@ -77,5 +77,11 @@ if(!(isset($_SESSION["user"]))) {
       <button type="submit" class="btn btn-primary mt-4" name=""submit2>Submit</button>
     </div>
   </form>
+
+  <div style="height: 200px;"></div>
+
+  <footer class="text-center text-muted">
+    <p>&copy; Jan Kubat 2020</p>
+  </footer>
 </body>
 </html>
