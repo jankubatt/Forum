@@ -21,7 +21,7 @@ Simple forum for homework submissions etc.
                      user varchar(255) NOT NULL,
                      isDone boolean NOT NULL DEFAULT 0,
                      isHanded boolean NOT NULL DEFAULT 0,
-                     solution varchar(666) NOT NULL,
+                     solution varchar(666) NOT NULL DEFAULT 0,
                      uid varchar(255) NOT NULL);
 
   CREATE TABLE chat (id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
