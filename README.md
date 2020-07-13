@@ -19,8 +19,8 @@ Simple forum for homework submissions etc.
                      subject varchar(255) NOT NULL,
                      date timestamp, duedate varchar(255) NOT NULL,
                      user varchar(255) NOT NULL,
-                     isDone boolean NOT NULL,
-                     isHanded boolean NOT NULL,
+                     isDone boolean NOT NULL DEFAULT 0,
+                     isHanded boolean NOT NULL DEFAULT 0,
                      solution varchar(666) NOT NULL,
                      uid varchar(255) NOT NULL);
 
