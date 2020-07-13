@@ -11,7 +11,7 @@ Simple forum for homework submissions etc.
                       username varchar(255) NOT NULL,
                       nickname varchar(255) NOT NULL,
                       password varchar(255) NOT NULL,
-                      workCount int NOT NULL);
+                      workCount int NOT NULL DEFAULT 0);
 
   CREATE TABLE work (id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
                      title varchar(255) NOT NULL,
