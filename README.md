@@ -1,5 +1,8 @@
 # Forum
-Simple forum for homework submissions etc.
+Simple forum for homework submissions during quarantine. Add, Edit, Remove, Submit your homeworks with your friends and much more.
+
+# Info
+This was my first bigger project with PHP so its a messy spaghetti code. 
 
 # How To Use (XAMPP)
 0) Put those files into the htdocs folder
